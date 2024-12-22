@@ -1,0 +1,34 @@
+@use '../util/' as u;
+
+.header {
+  background-color: var(--color-dk-purple);
+  color: var(--color-white);
+  padding-block: 32px 64px; // for viewport mobile
+  @include u.breakpoint(large) {
+    padding-block: 56px;
+  }
+
+  &__wrapper {
+    display: flex; // ek line me agye horizontally
+    align-items: center; // vertically center karega
+    justify-content: space-between; // left right karega
+  }
+  &__logo {
+    width: u.rem(96);
+    height: auto;
+  }
+  &__link {
+    color: var(--color-white);
+    transition: color 200ms ease-in-out;
+    &:hover {
+      color: var(--color-green);
+    }
+    &::after {
+      content: '';
+      display: block;
+      height: 2px;
+      background-color: var(--color-green);
+      margin-block-start: 4px; //margin top is same
+    }
+  }
+}
