@@ -14,7 +14,7 @@ body {
     u.rem(18)
   );
   line-height: 1.7;
-  // margin-block-end: 50%;
+  margin-block-end: 50%;
   overflow-x: hidden;
 }
 
@@ -57,4 +57,17 @@ a:active {
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
+  &.light {
+    &::after {
+      background-image: url('/assets/images/curved-hero-bottom-light.svg');
+    }
+  }
+}
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
